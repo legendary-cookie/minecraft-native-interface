@@ -28,12 +28,12 @@ public:
     Maybe use mcp mapping files to auto map?
     */
 
-    // djz -> 1.16.5
     // ave -> 1.8.9
     classes.addClass ("Minecraft", "ave")
         ->getClassAsContext ("Minecraft")
         ->addMethod ("getMinecraft", "A", "()Lnet/minecraft/client/Minecraft;",
-                     true);
+                     true)
+        ->addMethod ("stop", "g", "()V", false);
 
     Logger::logInfo ("MAPPER initialized");
   }

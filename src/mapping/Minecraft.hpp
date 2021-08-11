@@ -14,7 +14,9 @@ public:
   Minecraft (InjectionClient *client);
 
   jobject getMinecraft ();
+  void stop();
 
 private:
   jmethodID methodGetMinecraft;
+  jmethodID methodStop;
 };
