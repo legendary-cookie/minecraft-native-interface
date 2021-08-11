@@ -18,8 +18,8 @@ public:
 
   static void init() {
     /*
-            This feels very iffy
-            Maybe use mcp mapping files to auto map?
+    This feels very iffy
+    Maybe use mcp mapping files to auto map?
     */
 
     // djz -> 1.16.5
@@ -27,9 +27,8 @@ public:
         ->getClassAsContext("Minecraft")
         ->addMethod("getMinecraft", "C", "()Lnet/minecraft/client/Minecraft;",
                     true)
-        ->addField("is64bit", "ad",
-                   "java.lang.Boolean", false);
-	
+        ->addField("is64bit", "ad", "java.lang.Boolean", false);
+
     Logger::logInfo("MAPPER initialized");
   }
 
