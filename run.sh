@@ -5,4 +5,4 @@ echo "WARN: This script assumes minecraft is running and only ONE process with j
 PID=$(pidof java)
 echo "PID: $PID"
 
-sudo inject $PID build/out/library/libMinecraft.so
+sudo inject $PID _build/out/library/libMinecraft.so
