@@ -1,4 +1,5 @@
 #include "InjectionClient.hpp"
+#include "DiscordRP.hpp"
 #include "Logger.hpp"
 
 #ifdef __linux__
@@ -21,6 +22,8 @@ static void
 start ()
 {
   Logger::logInfo ("Starting...");
+  // Start Discord RPC
+  std::thread t_dc (startDiscordRPC);
   InjectionClient ();
   return;
 }
@@ -28,9 +31,10 @@ start ()
 static void
 init (void)
 {
+  // Injection into client
   std::thread t (start);
   // TODO: Fix the Signal 6 if t.join(); is removed
-  t.join();
+  t.join ();
 }
 
 #elif _WIN32
