@@ -13,12 +13,13 @@
 #include <string>
 #include <vector>
 
-class InjectionClient {
+class InjectionClient
+{
 public:
-  InjectionClient();
+  InjectionClient ();
 
-  JavaVM *getJVM();
-  JNIEnv *getENV();
+  JavaVM *getJVM ();
+  JNIEnv *getENV ();
 
 private:
   JavaVM *JVM;

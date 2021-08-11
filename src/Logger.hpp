@@ -4,25 +4,36 @@
 #include <iostream>
 #include <string>
 
-class Logger {
+class Logger
+{
 public:
-  static void logError(std::string message) {
+  static void
+  logError (std::string message)
+  {
     std::cout << "[ERROR] " << message << std::endl;
   }
 
-  static void logSuccess(std::string message) {
+  static void
+  logSuccess (std::string message)
+  {
     std::cout << "[SUCCESS] " << message << std::endl;
   }
 
-  static void logInfo(std::string message) {
+  static void
+  logInfo (std::string message)
+  {
     std::cout << "[INFO] " << message << std::endl;
   }
 
-  static void logFancy(std::string message) {
+  static void
+  logFancy (std::string message)
+  {
     std::cout << message << std::endl;
   }
 
-  static void logSequential() {
+  static void
+  logSequential ()
+  {
     std::cout << count << std::endl;
     count += 1;
   }

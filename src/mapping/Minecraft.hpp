@@ -10,12 +10,12 @@ class InjectionClient;
 
 class Minecraft : public JavaClass
 {
-	public:
-		Minecraft(InjectionClient* client);
+public:
+  Minecraft (InjectionClient *client);
 
-		jobject getMinecraft();
+  jobject getMinecraft ();
 
-	private:
-		jmethodID methodGetMinecraft;
-		jfieldID fieldIs64bit;
+private:
+  jmethodID methodGetMinecraft;
+  jfieldID fieldIs64bit;
 };

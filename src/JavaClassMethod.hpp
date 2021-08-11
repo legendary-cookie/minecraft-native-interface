@@ -3,20 +3,35 @@
 /* Util */
 #include <string>
 
-class JavaClassMethod {
+class JavaClassMethod
+{
 public:
-  JavaClassMethod() {}
+  JavaClassMethod () {}
 
-  JavaClassMethod(std::string methodName, std::string description,
-                  bool isMethodStatic)
-      : methodName(methodName), description(description),
-        isMethodStatic(isMethodStatic) {}
+  JavaClassMethod (std::string methodName, std::string description,
+                   bool isMethodStatic)
+      : methodName (methodName), description (description),
+        isMethodStatic (isMethodStatic)
+  {
+  }
 
-  std::string &getMethodName() { return methodName; }
+  std::string &
+  getMethodName ()
+  {
+    return methodName;
+  }
 
-  std::string &getDescription() { return description; }
+  std::string &
+  getDescription ()
+  {
+    return description;
+  }
 
-  bool getWhetherMethodIsStatic() { return isMethodStatic; }
+  bool
+  getWhetherMethodIsStatic ()
+  {
+    return isMethodStatic;
+  }
 
 private:
   std::string methodName;

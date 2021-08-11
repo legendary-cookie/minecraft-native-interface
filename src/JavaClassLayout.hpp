@@ -7,24 +7,41 @@
 /* Individual methods */
 #include "JavaClassMethod.hpp"
 
-class JavaClassLayout {
+class JavaClassLayout
+{
 public:
-  JavaClassLayout() {}
+  JavaClassLayout () {}
 
-  JavaClassLayout(std::string className) : className(className) {}
+  JavaClassLayout (std::string className) : className (className) {}
 
-  JavaClassMethod getField(std::string name) { return this->fields[name]; }
-
-  void addField(std::pair<std::string, JavaClassMethod> field) {
-    this->fields.insert(field);
+  JavaClassMethod
+  getField (std::string name)
+  {
+    return this->fields[name];
   }
 
-  JavaClassMethod getMethod(std::string name) { return this->methods.at(name); }
+  void
+  addField (std::pair<std::string, JavaClassMethod> field)
+  {
+    this->fields.insert (field);
+  }
 
-  std::string getClassName() { return className; }
+  JavaClassMethod
+  getMethod (std::string name)
+  {
+    return this->methods.at (name);
+  }
 
-  void addMethod(std::pair<std::string, JavaClassMethod> method) {
-    this->methods.insert(std::make_pair(method.first, method.second));
+  std::string
+  getClassName ()
+  {
+    return className;
+  }
+
+  void
+  addMethod (std::pair<std::string, JavaClassMethod> method)
+  {
+    this->methods.insert (std::make_pair (method.first, method.second));
   }
 
 private:

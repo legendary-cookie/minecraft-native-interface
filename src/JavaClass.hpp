@@ -17,22 +17,23 @@
 
 class InjectionClient;
 
-class JavaClass {
+class JavaClass
+{
 public:
-  JavaClass(InjectionClient *client, std::string className);
+  JavaClass (InjectionClient *client, std::string className);
 
   /* Objects */
-  template <typename T> jobject getObject(jmethodID method, T values...);
+  template <typename T> jobject getObject (jmethodID method, T values...);
 
-  jobject getObject(jmethodID method);
+  jobject getObject (jmethodID method);
 
-  jobject getObject(jfieldID field);
-  jboolean getBooleanField(jfieldID field, jobject object);
+  jobject getObject (jfieldID field);
+  jboolean getBooleanField (jfieldID field, jobject object);
 
 protected:
-  jfieldID getField(std::string name);
+  jfieldID getField (std::string name);
 
-  jmethodID getMethod(std::string name);
+  jmethodID getMethod (std::string name);
 
   std::string className;
   InjectionClient *client;
@@ -40,9 +41,9 @@ protected:
 
 private:
   /* Raw JNI stuff*/
-  jfieldID getFieldRAW(std::string name, std::string description,
-                       bool isMethodStatic);
+  jfieldID getFieldRAW (std::string name, std::string description,
+                        bool isMethodStatic);
 
-  jmethodID getMethodRAW(std::string name, std::string description,
-                         bool isMethodStatic);
+  jmethodID getMethodRAW (std::string name, std::string description,
+                          bool isMethodStatic);
 };
