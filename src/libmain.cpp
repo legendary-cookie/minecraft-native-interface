@@ -1,5 +1,5 @@
-#include "InjectionClient.hpp"
 #include "DiscordRP.hpp"
+#include "InjectionClient.hpp"
 #include "Logger.hpp"
 
 #ifdef __linux__
@@ -23,7 +23,6 @@ start ()
 {
   Logger::logInfo ("Starting...");
   // Start Discord RPC
-  std::thread t_dc (startDiscordRPC);
   InjectionClient ();
   return;
 }

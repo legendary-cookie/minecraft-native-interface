@@ -1,53 +1,53 @@
+#include <cstring>
+#include <iostream>
+
 #include "DiscordRP.hpp"
 #include "discord_rpc.h"
-#include <cstdio>
-#include <cstring>
+
+using namespace std;
 
 static void
 handleDiscordReady (const DiscordUser *connectedUser)
 {
-  printf ("\nDiscord: connected to user %s#%s - %s\n", connectedUser->username,
-          connectedUser->discriminator, connectedUser->userId);
+  cout << "Discord: connected to user" << connectedUser->username << "#"
+       << connectedUser->discriminator << "\n";
 }
 
 static void
 handleDiscordDisconnected (int errcode, const char *message)
 {
-  printf ("\nDiscord: disconnected (%d: %s)\n", errcode, message);
+  cout << "Discord: disconnected " << errcode << " " << message << "\n";
 }
 
 static void
 handleDiscordError (int errcode, const char *message)
 {
-  printf ("\nDiscord: error (%d: %s)\n", errcode, message);
+  cout << "Discord: error " << errcode << " " << message;
 }
 
 static void
 handleDiscordJoin (const char *secret)
 {
-  printf ("\nDiscord: join (%s)\n", secret);
 }
 
 static void
 handleDiscordSpectate (const char *secret)
 {
-  printf ("\nDiscord: spectate (%s)\n", secret);
 }
 
 static void
 handleDiscordJoinRequest (const DiscordUser *request)
 {
-  int response = -1;
-  char yn[4];
-  printf ("\nDiscord: join request from %s#%s - %s\n", request->username,
-          request->discriminator, request->userId);
 }
 
 void
 startDiscordRPC ()
 {
+  cout << "start";
   DiscordEventHandlers handlers;
+  cout << "handlers";
   memset (&handlers, 0, sizeof (handlers));
+  cout << "memset";
   handlers.ready = handleDiscordReady;
   handlers.disconnected = handleDiscordDisconnected;
   handlers.errored = handleDiscordError;
