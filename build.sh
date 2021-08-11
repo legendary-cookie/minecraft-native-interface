@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir -pv build/
-cd build 
+mkdir -pv _build/
+cd _build 
 if [[ -f "CMakeCache.txt" ]]; then
 	ninja
 else

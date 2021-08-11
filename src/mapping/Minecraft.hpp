@@ -17,5 +17,4 @@ public:
 
 private:
   jmethodID methodGetMinecraft;
-  jfieldID fieldIs64bit;
 };

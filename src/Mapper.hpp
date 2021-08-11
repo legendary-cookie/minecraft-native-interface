@@ -29,11 +29,11 @@ public:
     */
 
     // djz -> 1.16.5
-    classes.addClass ("Minecraft", "djz")
+    // ave -> 1.8.9
+    classes.addClass ("Minecraft", "ave")
         ->getClassAsContext ("Minecraft")
-        ->addMethod ("getMinecraft", "C", "()Lnet/minecraft/client/Minecraft;",
-                     true)
-        ->addField ("is64bit", "ad", "java.lang.Boolean", false);
+        ->addMethod ("getMinecraft", "A", "()Lnet/minecraft/client/Minecraft;",
+                     true);
 
     Logger::logInfo ("MAPPER initialized");
   }
