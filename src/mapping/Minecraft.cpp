@@ -18,5 +18,5 @@ Minecraft::getMinecraft ()
 void
 Minecraft::stop ()
 {
-  client->getENV ()->CallVoidMethod (this->getMinecraft (), methodStop);
+  
 }

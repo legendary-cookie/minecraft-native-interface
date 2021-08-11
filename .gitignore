@@ -2,3 +2,5 @@
 /logs/
 /.vscode
 /.cache
+/discord-rpc
+/rapidjson
