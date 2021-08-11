@@ -16,6 +16,7 @@ f1 ()
 }
 
 static void init (void) __attribute__ ((constructor));
+
 static void
 start ()
 {
@@ -28,6 +29,8 @@ static void
 init (void)
 {
   std::thread t (start);
+  // TODO: Fix the Signal 6 if t.join(); is removed
+  t.join();
 }
 
 #elif _WIN32
