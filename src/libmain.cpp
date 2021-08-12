@@ -1,4 +1,3 @@
-#include "DiscordRP.hpp"
 #include "InjectionClient.hpp"
 #include "Logger.hpp"
 
@@ -22,7 +21,6 @@ static void
 start ()
 {
   Logger::logInfo ("Starting...");
-  // Start Discord RPC
   InjectionClient ();
   return;
 }
