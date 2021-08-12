@@ -32,6 +32,7 @@ InjectionClient::InjectionClient ()
   Mapper::init ();
 
   Minecraft *mc = new Minecraft (this);
+  mc->stop();
   return;
 }
 
