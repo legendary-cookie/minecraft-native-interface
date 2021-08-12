@@ -18,5 +18,5 @@ Minecraft::getMinecraft ()
 void
 Minecraft::stop ()
 {
-  
+  getObject (this->methodStop);
 }
