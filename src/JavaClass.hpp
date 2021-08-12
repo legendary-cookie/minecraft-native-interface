@@ -27,8 +27,6 @@ public:
 
   jobject getObject (jmethodID method);
 
-  jobject getObject (jfieldID field);
-  jboolean getBooleanField (jfieldID field, jobject object);
 
 protected:
   jfieldID getField (std::string name);
